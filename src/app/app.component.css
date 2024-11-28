@@ -1,0 +1,156 @@
+#Container {
+  height: auto;
+  width: 500px;
+  text-align: center;
+  border: 1px solid #eaeaea;
+}
+#inputdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding-top: 10px;
+}
+#write {
+  /* margin-right: 50vh; */
+  opacity: 0;
+  background: rgb(247, 246, 246);
+  height: 80px;
+  width: 100%;
+}
+#input {
+  height: 15px;
+  width: 450px;
+}
+#button1 {
+  height: 30px;
+  border: 0;
+  border-radius: 3px;
+  background-color: #28a1b5;
+  color: white;
+  margin-top: 10px;
+  width: 95%;
+  transition: 0.5s;
+}
+#Containerbutton2 {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+#button2 {
+  height: 30px;
+  opacity: 0;
+  border: 0;
+  border-radius: 3px;
+  background-color: #28a1b5;
+  color: white;
+  width: 30%;
+  transition: 0.5s;
+}
+#Containerdelete1 {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+#Delete1,
+#Delete2 {
+  height: 30px;
+  opacity: 0;
+  border: 0;
+  border-radius: 3px;
+  background-color: #d63847;
+  color: white;
+  width: 45%;
+  transition: 0.5s;
+}
+#Bookicon {
+  padding-top: 2px;
+  height: 18px;
+  color: rgb(255, 255, 255);
+  background-color: #28a1b5;
+}
+#Tasks {
+  opacity: 0;
+  height: 250px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  overflow: auto;
+  border: 1px solid #f2f2f2;
+}
+#border {
+  background: rgba(247, 246, 246, 0.509);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2%;
+  height: 20px;
+  border: 1px solid #f2f2f2;
+  box-shadow: 0px 0px 1px;
+}
+#icon {
+  width: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#border h6 {
+  display: inline;
+  padding-left: 1%;
+}
+#icons {
+  margin-left: -6%;
+  display: inline;
+}
+#pencil {
+  color: rgba(238, 204, 87, 1);
+}
+#deleteicon {
+  color: #d12138;
+}
+.checked-class {
+  text-decoration: line-through;
+  color: #d12138;
+}
+#headlines,
+#headlines1 {
+  margin-top: 2px;
+  margin-bottom: 40px;
+  opacity: 0;
+}
+#Delete1:hover,
+#Delete2:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #d63847;
+  border: 0.5px solid #d63847;
+}
+#button1:hover,
+#button2:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #28a1b5;
+  border: 0.5px solid #28a1b5;
+}
+#pencil:hover,
+#deleteicon:hover {
+  color: black;
+}
+#headlines{
+  position: relative;
+}
+#headlines::before{
+  content: '';
+  background-image: url("/assets/Checklist.png");
+  background-position:center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 18vw;
+  height: 10vw;
+  width: 8vw;
+  position: absolute;
+}

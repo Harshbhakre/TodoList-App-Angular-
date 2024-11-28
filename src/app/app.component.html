@@ -1,0 +1,43 @@
+<div id="Container">
+  <h3 id="headlines">TodoInput</h3>
+  <div id="write">
+    <div id="inputdiv">
+      <div id="Bookicon"><i class="ri-git-repository-commits-fill"></i></div>
+      <input type="text" id="input" [(ngModel)]="taskobject.task"/>
+    </div>
+    @if (taskobject.id == 0){
+      <Button id="button1" (click)="Savedata()">Add new task</Button>
+    } @else{
+      <Button id="button1" (click)="Update()" (click)="changUpdate()">Update</Button>
+    }
+      
+    
+   
+  </div>
+
+  <h3 id="headlines1">TodoList</h3>
+  <div id="Containerbutton2">
+    <button id="button2" (click)="Getdata()">All</button>
+    <button id="button2" (click)="Done()">Done</button>
+    <button id="button2" (click)="NotDone()">Todo</button>
+  </div>
+
+  <div id="Tasks">
+@for (item of List; track $index) {
+
+    <div id="border">
+
+      <h6  [ngClass]="{'checked-class': item.completed}">{{item.task}}</h6>
+      <div id="icons">
+        <input type="checkbox" [(ngModel)]="item.completed" style="cursor: pointer"/>
+        <i class="ri-pencil-fill" id="pencil" (click)="OnEdit(item)" style="cursor: pointer;"></i>
+        <i class="ri-delete-bin-6-fill" id="deleteicon" (click)="OnDelete(item.id)" style="cursor: pointer;"></i>
+      </div>
+    </div>
+}
+</div>
+  <div id="Containerdelete1">
+    <button id="Delete1" (click)="deletethatDone()">Delete Done Tasks</button>
+    <button id="Delete2" (click)="deleteAll()">Delete All Tasks</button>
+  </div>
+</div>
